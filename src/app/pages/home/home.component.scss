@@ -1,0 +1,17 @@
+.home-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    padding: 34px 0;
+
+    header{
+        h1{
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+    }
+}
