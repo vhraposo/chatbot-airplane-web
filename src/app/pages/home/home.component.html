@@ -1,13 +1,20 @@
 <main class="flex flex-col justify-between items-center h-full py-[34px]">
-    <header>
-        <h1 class="text-primary-color text-2xl" >
+    <header class="text-center max-w-72">
+        <h1 class="text-primary-color text-2xl mb-3.5" >
             Seu assistente chegou!
         </h1>
-        <p>
+        <p class="text-base text-foreground-primary">
             Aqui você consegue tirar todas as suas dúvidas e aprender mais
             sobre a história da aviação!
         </p>
     </header>
-    <img src="/assets/airplane.png" />
-    <button>vamos conversar?</button>
+    <section class="flex flex-col w-full">
+        <icon-sparkle />
+        <img class="" src="/assets/airplane.png" />
+    </section>
+    <button class="flex items-center justify-between bg-primary-color w-11/12 text-white text-xl rounded-3xl border-none p-4">
+        <div></div>
+        vamos conversar?
+        <icon-arrow-right  />
+    </button>
 </main>
