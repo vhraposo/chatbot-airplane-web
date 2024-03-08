@@ -1,0 +1,16 @@
+<div class="flex flex-col items-center text-center gap-9">
+    <div class="flex items-center flex-col justify-center gap-4 w-full" *ngFor="let insightTopic of insightTopics">
+        <div class="">
+            <icon-interrogation *ngIf="insightTopic.icon === 'doubt'" />
+            <icon-curiosity *ngIf="insightTopic.icon === 'curiosity'" />
+            <icon-history *ngIf="insightTopic.icon === 'history'" />
+
+        </div>
+        <span class="text-sm text-foreground-secondary font-bold">{{ insightTopic.title }}</span>
+        
+        <ul class="flex flex-col gap-2 items-center text-center w-full">
+            <li class="w-full max-w-80 text-sm font-medium text-foreground-secondary bg-secondarybg p-2.5 px-4 rounded-2xl cursor-pointer" *ngFor="let question of insightTopic.questions">{{ question }}</li>
+        </ul>
+
+    </div>
+</div>
