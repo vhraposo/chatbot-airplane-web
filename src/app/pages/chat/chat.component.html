@@ -9,7 +9,7 @@
         </div>
         <img src="/assets/chatairplane.png" class="w-[45px] h-[40px] absolute right-0 mr-5 border border-red-300 rounded-full" alt="">
     </header>
-    <section class="h-full">
+    <section class="h-full p-8 pt-5 pb-9">
         <chat-insights (questionSelected)="sendSuggestedQuestion($event)" 
             *ngIf="messages.length === 0"
         />
