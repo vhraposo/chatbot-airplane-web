@@ -9,7 +9,12 @@
         <span class="text-sm text-foreground-secondary font-bold">{{ insightTopic.title }}</span>
         
         <ul class="flex flex-col gap-2 items-center text-center w-full">
-            <li class="w-full max-w-80 text-sm font-medium text-foreground-secondary bg-secondarybg p-2.5 px-4 rounded-2xl cursor-pointer" *ngFor="let question of insightTopic.questions">{{ question }}</li>
+            <li 
+                class="w-full max-w-80 text-sm font-medium text-foreground-secondary bg-secondarybg p-2.5 px-4 rounded-2xl cursor-pointer" 
+                *ngFor="let question of insightTopic.questions"
+                (click)="selectQuestion(question)"
+                >{{ question }}
+            </li>
         </ul>
 
     </div>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CuriosityComponent } from '../../icons/curiosity/curiosity.component';
 import { HistoryComponent } from '../../icons/history/history.component';
 import { InterrogationComponent } from '../../icons/interrogation/interrogation.component';
@@ -17,6 +17,8 @@ import { InterrogationComponent } from '../../icons/interrogation/interrogation.
   styleUrl: './chat-insights.component.scss'
 })
 export class ChatInsightsComponent {
+  @Output() questionSelected = new EventEmitter<string>()
+
   insightTopics = [
    {
       title: "Dúvidas",
@@ -45,4 +47,8 @@ export class ChatInsightsComponent {
       ]
     },
   ]
+
+  selectQuestion(value: string){
+    this.questionSelected.emit(value)
+  }
 }
